@@ -191,7 +191,7 @@ $new_tab_message         = '<span class="screen-reader-text">' . esc_html__( '(O
 
 				<a target="_blank" href="<?php echo esc_url( $extension->get_buy_url() ); ?>" class="yoast-button-upsell"><?php
 					/* translators: $1$s expands to Yoast SEO Premium */
-					printf( __( 'Buy %1$s', 'wordpress-seo' ), $extension->get_title() );
+					printf( esc_html__( 'Buy %1$s', 'wordpress-seo' ), $extension->get_title() );
 					echo $new_tab_message;
 					echo '<span aria-hidden="true" class="yoast-button-upsell__caret"></span>';
 				?></a>
@@ -200,7 +200,7 @@ $new_tab_message         = '<span class="screen-reader-text">' . esc_html__( '(O
 					<?php
 					printf(
 						/* translators: Text between %1$s and %2$s will only be shown to screen readers. %3$s expands to the product name. */
-						__( 'More information %1$sabout %3$s%2$s', 'wordpress-seo' ),
+						esc_html__( 'More information %1$sabout %3$s%2$s', 'wordpress-seo' ),
 						'<span class="screen-reader-text">',
 						'</span>',
 						$extension->get_title()
@@ -259,7 +259,7 @@ $new_tab_message         = '<span class="screen-reader-text">' . esc_html__( '(O
 						<?php else : ?>
 							<a target="_blank" class="yoast-button-upsell" href="<?php echo esc_url( $extension->get_buy_url() ); ?>"><?php
 								/* translators: %s expands to the product name */
-								printf( __( 'Buy %s', 'wordpress-seo' ), $extension->get_buy_button() );
+								printf( esc_html__( 'Buy %s', 'wordpress-seo' ), $extension->get_buy_button() );
 								echo $new_tab_message;
 								echo '<span aria-hidden="true" class="yoast-button-upsell__caret"></span>';
 							?></a>
@@ -268,7 +268,7 @@ $new_tab_message         = '<span class="screen-reader-text">' . esc_html__( '(O
 								<?php
 								printf(
 									/* translators: Text between %1$s and %2$s will only be shown to screen readers. %3$s expands to the product name. */
-									__( 'More information %1$sabout %3$s%2$s', 'wordpress-seo' ),
+									esc_html__( 'More information %1$sabout %3$s%2$s', 'wordpress-seo' ),
 									'<span class="screen-reader-text">',
 									'</span>',
 									$extension->get_title()
